@@ -1,0 +1,19 @@
+:root {
+  --primary-color: hsl(225, 100%, 94%);
+  --secondary-color: hsl(245, 75%, 52%);
+
+  --light-color: hsl(225, 100%, 98%);
+  --medium-color: hsl(224, 23%, 55%);
+  --dark-color: hsl(223, 47%, 23%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Red Hat Display', sans-serif;
+}
