@@ -4,7 +4,7 @@
   --complement-color: hsl(245, 83%, 68%);
 
   --light-color: hsl(225, 100%, 98%);
-  --medium-color: hsl(224, 23%, 55%);
+  --medium-color: hsl(224, 23%, 45%);
   --dark-color: hsl(223, 47%, 23%);
 
   --white-color: hsl(0, 0%, 100%);
@@ -115,6 +115,17 @@ body{
 .order-summary__btn--no-fill:hover{
   color: var(--dark-color);
 }
+
+/* ----- Footer ----- */
+
+.attribution{
+  font-size: 1.4rem;
+  text-align: center;
+}
+.attribution a{
+  color: var(--secondary-color);
+}
+
 @media screen and (min-width:420px) {
   .order-summary__info{
     padding: 4.8rem;
