@@ -1,19 +1,122 @@
 :root {
   --primary-color: hsl(225, 100%, 94%);
   --secondary-color: hsl(245, 75%, 52%);
+  --complement-color: hsl(245, 83%, 68%);
 
   --light-color: hsl(225, 100%, 98%);
   --medium-color: hsl(224, 23%, 55%);
   --dark-color: hsl(223, 47%, 23%);
+
+  --white-color: hsl(0, 0%, 100%);
 }
 
 * {
-  box-sizing: border-box;
+  
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+p{
+    font-size: 1.6rem;
+    color: var(--medium-color);
 }
 
 html {
   font-size: 62.5%;
   font-family: 'Red Hat Display', sans-serif;
+}
+
+body{
+    background: url(../images/pattern-background-desktop.svg) top/contain no-repeat;
+    background-color: var(--primary-color);
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 5.0rem;
+    place-items: center;
+    padding: 0 16px;
+}
+
+/* ----- Order Summary -----*/
+
+.order-summary{
+    max-width: 45.0rem;
+    background-color: var(--white-color);
+    border-radius: 1.6rem;
+    text-align: center;
+}
+
+.order-summary__img{
+    width: 100%;
+    height: auto;
+    border-radius: 1.6rem 1.6rem 0 0 ;
+}
+
+.order-summary__info{
+  padding: 2.4rem;
+}
+
+.order-summary__title{
+    font-size: 2.8rem;
+    color: var(--dark-color);
+    font-weight: 900;
+    margin-bottom: 2.0rem;
+}
+.order-summary__plan{
+  background-color: var(--light-color);
+  display: grid;
+  grid-template-columns: 5.0rem 1fr 6.4rem;
+  place-items: center start;
+  grid-gap: 1.6rem;
+  border-radius: 1.6rem;
+  padding: 2.0rem;
+  margin: 2.4rem 0;
+}
+
+.order-summary__plan-name{
+  font-weight: 900;
+  margin-bottom: 0.4rem;
+}
+.order-summary__plan-action{
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  transition: color .3s ease;
+}
+.order-summary__plan-action:hover{
+  color: var(--complement-color);
+}
+
+.order-summary__btn{
+  background-color: var(--secondary-color);
+  padding: 1.6rem;
+  width: 100%;
+  border: none;
+  border-radius: 0.8rem;
+  color: var(--primary-color);
+  font-weight: 900;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 1.6rem;
+  box-shadow: 0 0.8rem 1.6rem var(--primary-color) ;
+  transition: background-color .3s ease;
+}
+.order-summary__btn:hover{
+  background-color: var(--complement-color);
+}
+.order-summary__btn--no-fill{
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 900;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 1.6rem;
+  margin-top: 2.4rem;
+  color: var(--medium-color);
+  transition: color .3s ease;
+}
+.order-summary__btn--no-fill:hover{
+  color: var(--dark-color);
+}
+@media screen and (min-width:420px) {
+  .order-summary__info{
+    padding: 4.8rem;
+  }
 }
